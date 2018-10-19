@@ -1,0 +1,52 @@
+// out:App.css
+
+// Imports
+@import './3L/3L.less';
+@import './fonts.css';
+@import './mixins.less';
+
+
+// Variables
+@PrimaryColor: #3AAFA9;
+@SecondaryColor: #17252A;
+@AccentColor: #ffffff;
+
+@HeadingFont: 'Viga';
+@HeadingSize: 58px;
+@BodyFont: 'Inconsolata';
+@SubSize: 18px;
+@BodySize: 16px;
+@FontWeight: 400;
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  .calcheight(~"100vh - 10px");
+  background: @PrimaryColor;
+  .headerLogo {
+    font-family: @HeadingFont;
+    font-weight: @FontWeight;
+    font-size: 36px;
+    line-height: 48px;
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  .headerHello {
+    font-family: @BodyFont;
+    font-weight: bold;
+    font-size: 10rem;
+    line-height: 11rem;
+    color: @AccentColor;
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+  }
+}

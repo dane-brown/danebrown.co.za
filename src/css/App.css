@@ -1,0 +1,35 @@
+@import 'fonts.css';
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: -moz-calc(100vh - 10px);
+  height: -o-calc(100vh - 10px);
+  height: -webkit-calc(100vh - 10px);
+  height: calc(100vh - 10px);
+  background: #3AAFA9;
+}
+.header .headerLogo {
+  font-family: 'Viga';
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  color: #fff;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.header .headerHello {
+  font-family: 'Inconsolata';
+  font-weight: bold;
+  font-size: 10rem;
+  line-height: 11rem;
+  color: #ffffff;
+  position: absolute;
+  bottom: 70px;
+  right: 70px;
+}
