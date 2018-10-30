@@ -18,14 +18,21 @@ function imageUrlFor(source) {
 };
 
 // Queries
-const project_query = `*[_type == "author"] {
+const skill_query = `*[_type == "skill" && featured == true] {
+  _id,
+  name,
+  percentage,
+  slug,
+}[0..100]
+`
+const project_query = `*[_type == "project" && featured == true] {
   _id,
   name,
   slug,
   logo,
   website_image,
   bio,
-}[0...5]
+}[0..100]
 `
 
 
@@ -33,7 +40,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects : []
+      projects : [],
+      skills: [],
     }
   }
 
@@ -44,14 +52,27 @@ class App extends Component {
         this.setState({
           projects: res
         })
+      });
+    sanityClient
+    .fetch(skill_query)
+    .then(res => {
+      this.setState({
+        skills: res
       })
+    }) 
   }
 
 
   render() {
     return (
       <div>
-        <Header projects={this.state.projects}></Header>
+        <Header projects={this.state.projects} />
+        {this.state.projects.map((project) => {
+          return <div key={project._id}>{project.name}</div>
+        })}
+        {this.state.skills.map((skill) => {
+          return <div key={skill._id}>{skill.name} - {skill.percentage}%</div>
+        })}
       </div>
     );
   }
