@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import Typist from 'react-typist';
+import Github from './icons/Github';
+import Twitter from './icons/Twitter';
+import Linkedin from './icons/Linkedin';
+import Instagram from './icons/Instagram';
+import Facebook from './icons/Facebook';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
-const words = '<hello>';
-const closewords = '/>';
-
-class Header extends Component {
+class Footer extends Component {
   constructor(props) {
     super(props);
     this.gotoProfile = this.gotoProfile.bind(this);
@@ -14,11 +15,11 @@ class Header extends Component {
     this.gotoSkills = this.gotoSkills.bind(this);
     this.gotoContact = this.gotoContact.bind(this);
   }
+
   gotoProfile() {
     scroller.scrollTo('speak-code', {
       duration: 800,
       delay: 0,
-      offset: -150,
       smooth: 'easeInOutQuart'
     });
   }
@@ -44,41 +45,38 @@ class Header extends Component {
     });
   }
 
-
   render() {
     return (
-      <section className="header">
-        <div className="headerContent">
-          <a href="/" className="headerLogo">Dane Brown</a>
-          <ul className="headerNavigation">
-            <a href="#" onClick={this.gotoProfile}>
-              <li>Profile</li>
+      <section id="footer">
+        <div className="container footer">
+          <div className="socials">
+            <Github/>
+            <Twitter/>
+            <Linkedin/>
+            <Instagram/>
+            <Facebook/>
+          </div>
+          <div className="footer-links">
+            <a href="#1" onClick={this.gotoProfile}>
+              Profile
             </a>
             <a href="#" onClick={this.gotoSkills}>
-              <li>Skills</li>
+            Skills
             </a>
             <a href="#" onClick={this.gotoExperience}>
-              <li>Experience</li>
+              Experience
             </a>
             <a href="#">
-              <li>Projects</li>
+              Projects
             </a>
             <a href="#" onClick={this.gotoContact}>
-              <li>Contact</li>
+              Contact
             </a>
-          </ul>
-        </div>
-        <div className="container header-container">
-          <Typist className="headerHello" avgTypingDelay={300} delay={150} cursor={{show:false,}}>
-            {words}
-            <Typist.Backspace count={1} delay={600} />
-            <Typist.Delay ms={300} />
-            {closewords}
-          </Typist>
+          </div>
         </div>
       </section>
     );
   }
 }
 
-export default Header;
+export default Footer;
