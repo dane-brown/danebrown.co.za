@@ -10,16 +10,16 @@ import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, 
 class Footer extends Component {
   constructor(props) {
     super(props);
-    this.gotoProfile = this.gotoProfile.bind(this);
     this.gotoExperience = this.gotoExperience.bind(this);
     this.gotoSkills = this.gotoSkills.bind(this);
     this.gotoContact = this.gotoContact.bind(this);
+    this.gotoProjects = this.gotoProjects.bind(this);
   }
 
-  gotoProfile() {
-    scroller.scrollTo('speak-code', {
-      duration: 800,
+  gotoProjects() {
+    scroller.scrollTo('projects', {
       delay: 0,
+      duration: 800,
       smooth: 'easeInOutQuart'
     });
   }
@@ -57,16 +57,13 @@ class Footer extends Component {
             <Facebook/>
           </div>
           <div className="footer-links">
-            <a href="#1" onClick={this.gotoProfile}>
-              Profile
-            </a>
             <a href="#" onClick={this.gotoSkills}>
             Skills
             </a>
             <a href="#" onClick={this.gotoExperience}>
               Experience
             </a>
-            <a href="#">
+            <a href="#" onClick={this.gotoProjects}>
               Projects
             </a>
             <a href="#" onClick={this.gotoContact}>

@@ -9,23 +9,25 @@ const closewords = '/>';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.gotoProfile = this.gotoProfile.bind(this);
+    this.state = {
+      animate : false,
+    };
     this.gotoExperience = this.gotoExperience.bind(this);
     this.gotoSkills = this.gotoSkills.bind(this);
     this.gotoContact = this.gotoContact.bind(this);
+    this.gotoProjects = this.gotoProjects.bind(this);
   }
-  gotoProfile() {
-    scroller.scrollTo('speak-code', {
-      duration: 800,
+  gotoProjects() {
+    scroller.scrollTo('projects', {
       delay: 0,
-      offset: -150,
+      duration: 800,
       smooth: 'easeInOutQuart'
     });
   }
   gotoExperience() {
     scroller.scrollTo('journey', {
-      duration: 800,
       delay: 0,
+      duration: 800,
       smooth: 'easeInOutQuart'
     });
   }
@@ -44,6 +46,13 @@ class Header extends Component {
     });
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        animate: true,
+      })
+    }, 3500)
+  }
 
   render() {
     return (
@@ -51,16 +60,13 @@ class Header extends Component {
         <div className="headerContent">
           <a href="/" className="headerLogo">Dane Brown</a>
           <ul className="headerNavigation">
-            <a href="#" onClick={this.gotoProfile}>
-              <li>Profile</li>
-            </a>
             <a href="#" onClick={this.gotoSkills}>
               <li>Skills</li>
             </a>
             <a href="#" onClick={this.gotoExperience}>
               <li>Experience</li>
             </a>
-            <a href="#">
+            <a href="#" onClick={this.gotoProjects}>
               <li>Projects</li>
             </a>
             <a href="#" onClick={this.gotoContact}>
@@ -69,6 +75,7 @@ class Header extends Component {
           </ul>
         </div>
         <div className="container header-container">
+          <div className={"header-line " + (this.state.animate ? "animate" : "")}></div>
           <Typist className="headerHello" avgTypingDelay={300} delay={150} cursor={{show:false,}}>
             {words}
             <Typist.Backspace count={1} delay={600} />
