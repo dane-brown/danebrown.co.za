@@ -207,7 +207,7 @@ section {
   position: relative;
   padding-bottom: 70px;
   .speak-line {
-    width: 4px;
+    width: 4px;      
     .calcheight(~"100% - 239px");
     position: absolute;
     top: 239px;
@@ -324,7 +324,7 @@ section {
     background: @SecondaryColor;
     border-radius: 7px;
     position: absolute;
-    top: -2px;
+    top: -2px;      
     height: 100%;
     left: 50%;
     .transform(translate(-50%,0));
@@ -351,6 +351,8 @@ section {
       padding-right: 54%;
       text-align: right;
       position: relative;
+      opacity: 0;
+      .transition(all 0.7s ease-in-out);
       &:last-child {
         margin-bottom: 0;
       }
@@ -360,6 +362,7 @@ section {
         border-radius: 21px;
         background: @PrimaryColor;
         position: absolute;
+        opacity: 1;
         left: 50%;
         .transform(translate(-50%,0));
         top: 0;
@@ -382,6 +385,9 @@ section {
         color: #646565;
         font-weight: 400;
         font-size: 16px;
+      }
+      &.animate {
+        opacity: 1;
       }
     }
   }
