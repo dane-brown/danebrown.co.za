@@ -5,8 +5,9 @@ class Skills extends Component {
   render() {
     return (
       <div className="container skills">
-      {this.props.skills.map((skill) => {
+      {this.props.skills.map((skill, index) => {
         let style = {
+          transitionDelay: index * 0.15 + "s",
           width: skill.percentage + '%'
         };
         return (

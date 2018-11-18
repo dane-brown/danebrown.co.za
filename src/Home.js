@@ -69,13 +69,19 @@ class Home extends Component {
       experience: [],
     }
     this.handleAnimation = this.handleAnimation.bind(this);
+    this.handleExp = this.handleExp.bind(this);
+  }
+
+  handleExp() {
+    this.setState({
+      animateExp: true,
+    })
   }
 
   handleAnimation() {
     this.setState({
       animateSkills: true,
     })
-    console.log('reached');
   }
 
   componentDidMount() {
@@ -119,7 +125,7 @@ class Home extends Component {
 
           {/* Skills */}
           <section id="speak-code">
-            <div className={"speak-line " + (this.state.animateSkills ? "animate" : "")}></div>
+            <div className="speak-line"></div>
             <div className="container">
               <div className="main-headings p-right-250">I SPEAK CODE</div>
             </div>
@@ -135,13 +141,14 @@ class Home extends Component {
 
           {/* Experience */}
           <section id="journey">
-            <div className="journey-line"></div>
+            <div className={"journey-line " + (this.state.animateExp ? "animate" : "")}></div>
             <div className="container">
               <div className="main-headings">
                 THE JOURNEY<br/><span>OF A PIXEL</span>
               </div>
             </div>
-            <Experience experience={this.state.experience}/>
+            <Waypoint onEnter={this.handleExp}/>
+            <Experience animate={this.state.animateExp} experience={this.state.experience}/>
           </section>
 
           {/* Projects */}
