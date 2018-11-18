@@ -1,0 +1,5 @@
+# How to deploy
+
+1 - Run npm run build 
+2- cd /build
+3- run now
