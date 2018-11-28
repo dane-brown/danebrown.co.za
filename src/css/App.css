@@ -227,12 +227,12 @@ section {
 }
 #speak-code .speak-line {
   width: 4px;
-  height: -moz-calc(100% - 239px);
-  height: -o-calc(100% - 239px);
-  height: -webkit-calc(100% - 239px);
-  height: calc(100% - 239px);
+  height: -moz-calc(100% - 222px);
+  height: -o-calc(100% - 222px);
+  height: -webkit-calc(100% - 222px);
+  height: calc(100% - 222px);
   position: absolute;
-  top: 239px;
+  top: 222px;
   border-radius: 7px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);

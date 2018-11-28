@@ -1,5 +1,5 @@
 # How to deploy
 
-1 - Run npm run build 
-2- cd /build
-3- run now
+1 - Run now && now alias
+This builds the current project into static directory
+/build, deploys the app and then sets the alias to danebrown.co.za

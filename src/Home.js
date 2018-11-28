@@ -133,7 +133,7 @@ class Home extends Component {
               <div className="main-headings p-right-150">FOR COFFEE</div>
             </div>
             <div className="container speak-bio">
-              <p className={this.state.animateSkills ? "animate" : ""}>Duis consectetur, nibh et porttitor blandit, odio purus venenatis augue, ac tempor elit purus eu arcu.</p>  
+              <p className={this.state.animateSkills ? "animate" : ""}>Over the years I have learnt a few things here and there, take a look!</p>  
             </div>
             <Waypoint onEnter={this.handleAnimation}/>
             <Skills skills={this.state.skills} animate={this.state.animateSkills}/>
@@ -161,9 +161,9 @@ class Home extends Component {
             <div className="container talk">
               <div className="resume">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non felis et eros commodo viverra. Sed eget rutrum libero. Vestibulum mollis nulla tincidunt sem fringilla, et semper urna efficitur. 
+                  I'm a hard working person who is enthusiastic about new technologies and ways to do things. I love working with Javascript and Python mainly. My main focus is to always be learning something new and bettering my skills as a programmer.
                 </p>
-                <button className="button">RESUME</button>
+                <a target="_blank" href={process.env.PUBLIC_URL + '/cv.pdf'} className="button">RESUME</a>
               </div>
               <Form/>
             </div>
