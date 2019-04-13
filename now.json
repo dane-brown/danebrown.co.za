@@ -1,12 +1,16 @@
 {
-  "version": 2,
-  "alias": "danebrown.co.za",
+  "version": 1,
   "name": "danebrown.co.za",
-  "builds": [
-      { "src": "package.json", "use": "@now/static-build" }
-  ],
-  "routes": [
-    {"src": "^/static/(.*)", "dest": "/static/$1"},
-    {"src": ".*", "dest": "/index.html"}
-  ]
+  "type": "static",
+  "static": {
+    "public": "build",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "alias": ["danebrown.co.za", "www.danebrown.co.za"],
+  "files": ["build"]
 }
