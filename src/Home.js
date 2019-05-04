@@ -120,7 +120,7 @@ class Home extends Component {
           <section id="speak-code">
             <div className="speak-line" />
             <div className="container">
-              <div className="main-headings p-right-250">I SPEAKs CODE</div>
+              <div className="main-headings p-right-250">I SPEAKss CODE</div>
             </div>
             <div className="container">
               <div className="main-headings p-right-150">FOR COFFEE</div>
