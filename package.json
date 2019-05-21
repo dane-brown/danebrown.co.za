@@ -7,8 +7,8 @@
     "@sanity/client": "^0.135.0",
     "@sanity/image-url": "^0.135.0",
     "emailjs": "^2.2.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
     "react-scroll": "^1.7.10",
@@ -17,7 +17,8 @@
     "react-typist": "^2.0.4",
     "react-waypoint": "^8.0.3",
     "slick-carousel": "^1.8.1",
-    "smooth-scrollbar": "^8.3.1"
+    "smooth-scrollbar": "^8.3.1",
+    "use-dark-mode": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts start",

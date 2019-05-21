@@ -3,13 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import emailtest from "./views/emailtest";
 import NoMatch from "./NoMatch";
+import useDarkMode from "use-dark-mode";
 
 // Styles
 import "./css/App.css";
 
-class App extends Component {
-  render() {
-    return (
+const App = () => {
+  const darkMode = useDarkMode(false);
+
+  return (
+    <>
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -17,8 +20,8 @@ class App extends Component {
           <Route component={NoMatch} />
         </Switch>
       </Router>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default App;
