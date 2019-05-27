@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 // Sanity Database
-import sanity from "./sanity";
 import sanityClient from "./sanity";
 
 // Styles
@@ -180,6 +179,7 @@ class Home extends Component {
                 </p>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={process.env.PUBLIC_URL + "/cv.pdf"}
                   className="button"
                 >

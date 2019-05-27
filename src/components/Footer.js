@@ -1,11 +1,24 @@
-import React, { Component } from 'react';
-import Github from './icons/Github';
-import Twitter from './icons/Twitter';
-import Linkedin from './icons/Linkedin';
-import Instagram from './icons/Instagram';
-import Facebook from './icons/Facebook';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
+import React, { Component } from "react";
+import Github from "./icons/Github";
+import Twitter from "./icons/Twitter";
+import Linkedin from "./icons/Linkedin";
+import Instagram from "./icons/Instagram";
+import Facebook from "./icons/Facebook";
+import {
+  // eslint-disable-next-line
+  Link,
+  // eslint-disable-next-line
+  DirectLink,
+  // eslint-disable-next-line
+  Element,
+  // eslint-disable-next-line
+  Events,
+  // eslint-disable-next-line
+  animateScroll as scroll,
+  // eslint-disable-next-line
+  scrollSpy,
+  scroller
+} from "react-scroll";
 
 class Footer extends Component {
   constructor(props) {
@@ -17,31 +30,31 @@ class Footer extends Component {
   }
 
   gotoProjects() {
-    scroller.scrollTo('projects', {
+    scroller.scrollTo("projects", {
       delay: 0,
       duration: 800,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart"
     });
   }
   gotoExperience() {
-    scroller.scrollTo('journey', {
+    scroller.scrollTo("journey", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart"
     });
   }
   gotoSkills() {
-    scroller.scrollTo('speak-code', {
+    scroller.scrollTo("speak-code", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart"
     });
   }
   gotoContact() {
-    scroller.scrollTo('lets-talk', {
+    scroller.scrollTo("lets-talk", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart"
     });
   }
 
@@ -50,23 +63,23 @@ class Footer extends Component {
       <section id="footer">
         <div className="container footer">
           <div className="socials">
-            <Github/>
-            <Twitter/>
-            <Linkedin/>
-            <Instagram/>
-            <Facebook/>
+            <Github />
+            <Twitter />
+            <Linkedin />
+            <Instagram />
+            <Facebook />
           </div>
           <div className="footer-links">
-            <a href="#" onClick={this.gotoSkills}>
-            Skills
+            <a href="#1" onClick={this.gotoSkills}>
+              Skills
             </a>
-            <a href="#" onClick={this.gotoExperience}>
+            <a href="#1" onClick={this.gotoExperience}>
               Experience
             </a>
-            <a href="#" onClick={this.gotoProjects}>
+            <a href="#1" onClick={this.gotoProjects}>
               Projects
             </a>
-            <a href="#" onClick={this.gotoContact}>
+            <a href="#1" onClick={this.gotoContact}>
               Contact
             </a>
           </div>
