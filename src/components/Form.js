@@ -56,7 +56,7 @@ class Form extends Component {
           <div className={"placeholder " + (this.state.messageToggled ? "animate" : "") }>Message</div>
           <textarea className="special" name="message" id="form-message" cols="30" rows="10"></textarea>
         </div>
-        <input className="form-submit" type="submit" value="SPAM MEE"/>
+        <input className="form-submit" type="submit" value="SPAM ME!"/>
       </form>
     );
   }
