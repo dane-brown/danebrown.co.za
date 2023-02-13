@@ -30,29 +30,33 @@ class Header extends Component {
     this.gotoContact = this.gotoContact.bind(this);
     this.gotoProjects = this.gotoProjects.bind(this);
   }
-  gotoProjects() {
+  gotoProjects(e) {
     console.log("firing");
+    e.preventDefault();
     scroller.scrollTo("projects", {
       delay: 0,
       duration: 800,
       smooth: "easeInOutQuart"
     });
   }
-  gotoExperience() {
+  gotoExperience(e) {
+    e.preventDefault();
     scroller.scrollTo("journey", {
       delay: 0,
       duration: 800,
       smooth: "easeInOutQuart"
     });
   }
-  gotoSkills() {
+  gotoSkills(e) {
+    e.preventDefault();
     scroller.scrollTo("speak-code", {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart"
     });
   }
-  gotoContact() {
+  gotoContact(e) {
+    e.preventDefault();
     scroller.scrollTo("lets-talk", {
       duration: 800,
       delay: 0,

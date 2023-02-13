@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import imageUrlFor from "../imageUrlFor";
 import ProjectSlider from "./ProjectSlider";
-import { animateScroll as scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 
 class Projects extends Component {
   constructor(props) {
